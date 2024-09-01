@@ -1,0 +1,110 @@
+.container-product-watchList{
+    background-color:#EEE;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:10px;
+    min-height:100vh;
+}
+
+.container-product-watchList .card-watchList{
+    width:400px;
+    height:auto;    
+    /* height:auto;     */
+    /* text-align:center; */
+    padding:5px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2); 
+    position:relative;
+    overflow:hidden;
+    transition:.5s;
+
+}
+.container-product-watchList .card-watchList p:nth-child(2){
+    margin-top:5px;
+}
+.container-product-watchList .card-watchList p:nth-child(3){
+    margin-top:5px;
+}
+
+.container-product-watchList .card-watchList p:nth-child(4){
+    margin-top:5px;
+}
+
+.container-product-watchList .card-watchList:hover img{
+    transform:scale(1.2);
+}
+.div-img-watch-list{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+}
+
+.div-img-watch-list img{
+    width:100%;
+    height:100%;
+    transition:.5s ;
+}
+.container-product-watchList .card-watchList button{
+    border:none;
+    display:inline-block;
+    outline:none;
+    width:100%;
+    margin-top:10px;
+    padding:5px 10px;
+    border-radius:10px;
+    border:1px solid #001;
+    background-color:transparent;
+    cursor:pointer; 
+    position:relative;
+    /* left:50px; */
+    overflow:hidden;
+    
+}
+.container-product-watchList .card-watchList button>span{
+    font-size:20px;
+    letter-spacing:2px;
+    position:relative;
+    z-index:2;
+    color:#002;
+}
+.container-product-watchList .card-watchList button:hover{
+    border:none;
+}
+.container-product-watchList .card-watchList button::after{
+content:"";
+position:absolute;
+top:0;
+right:0px;
+width:0px;
+height:0px;
+border-radius:10px;
+background-color:purple;
+transition:.5s;
+opacity:1;
+z-index:1;
+}
+
+
+.container-product-watchList .card-watchList button::before{
+    content:"";
+    position:absolute;
+    border-radius:10px;
+    bottom:0;
+    left:0px;
+    width:0px;
+    height:0px;
+    background-color:purple;
+    transition:.5s;
+    opacity:1;
+    z-index:1;
+    }
+    .container-product-watchList .card-watchList  button:hover span{
+        color:#EEE;
+    }
+    .container-product-watchList .card-watchList button:hover::after ,.container-product-watchList .card-watchList button:hover::before {
+    width:100%;
+    height:100%;
+   
+}
