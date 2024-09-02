@@ -6,7 +6,7 @@ import Pagination from "../components/Pagination/Pagination";
 
 const Home = ({search}) => {
   const [state , setId] =useState(0);
-  console.log(search);
+  // console.log(search);
   const [statePage, setStatePage] = useState(1);
   // const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1); 
