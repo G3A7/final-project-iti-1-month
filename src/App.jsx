@@ -11,6 +11,7 @@ import Home from "./Home/Home";
 import WatchList from "./WatchList/WatchList";
 import DetailsProduct from "./Details/DetailsProduct";
 import { useState } from "react";
+import Footer from "./components/footer/Footer";
 
 
 
@@ -25,8 +26,10 @@ return <ContextProvider>
           <Route path="/watchList" element={<WatchList />} />
           <Route path={`/details/:id`} element={<DetailsProduct />} />
          </Routes>
+         <Footer/>
          </div>
   </ContextProvider> ; 
 }
 
 export default App;
+  
