@@ -35,8 +35,16 @@ ul img{
     height:20px;
     cursor:pointer;
 }
+li a span{
+    width:20px;
+    height:20px;
+    background-color:purple;
+    padding:5px;
+    border-radius:50%;
+    color:white;
+}
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 @media (max-width:550px){
     ul li:nth-child(2){ 
