@@ -38,3 +38,8 @@ ul img{
 a{
     text-decoration: none;
 }
+@media (max-width:550px){
+    ul li:nth-child(2){ 
+        width: 200px;
+    }
+}
