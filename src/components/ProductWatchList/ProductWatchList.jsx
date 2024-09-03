@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useData } from "../context/globalContext";
 import './ProductWatchList.css'
 function ProductWatchList() {
@@ -30,6 +31,7 @@ function ProductWatchList() {
                 payload:item
               })
             }}><span>RemoveFromWatchList</span></button>
+            <button><Link to={`/details/${item.id}`}>Details</Link></button>
            </div>
         </div>)
         })

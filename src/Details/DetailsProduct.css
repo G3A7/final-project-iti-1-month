@@ -30,3 +30,65 @@
 .div-card-details-video .p-3{
     margin-top:10px;
 }
+.div-card-details-video button{
+    border:none;
+    display:inline-block;
+    outline:none;
+    width:100%;
+    margin-top:10px;
+    padding:5px 10px;
+    border-radius:10px;
+    border:1px solid #001;
+    background-color:transparent;
+    cursor:pointer; 
+    position:relative;
+    /* left:50px; */
+    overflow:hidden;
+    
+}
+.div-card-details-video button>span{
+    font-size:20px;
+    letter-spacing:2px;
+    position:relative;
+    z-index:2;
+    color:#002;
+}
+ .div-card-details-video button:hover{
+    border:none;
+}
+ .div-card-details-video button::after{
+content:"";
+position:absolute;
+top:0;
+right:0px;
+width:0px;
+height:0px;
+border-radius:10px;
+background-color:purple;
+transition:.5s;
+opacity:1;
+z-index:1;
+}
+
+
+.div-card-details-video button::before{
+    content:"";
+    position:absolute;
+    border-radius:10px;
+    bottom:0;
+    left:0px;
+    width:0px;
+    height:0px;
+    background-color:purple;
+    transition:.5s;
+    opacity:1;
+    z-index:1;
+    }
+ .div-card-details-video  button:hover span{
+        color:#EEE;
+    }
+   .div-card-details-video button:hover::after , .div-card-details-video button:hover::before {
+    width:100%;
+    height:100%;
+   
+}

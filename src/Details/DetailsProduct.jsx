@@ -3,6 +3,7 @@ import "./DetailsProduct.css";
 
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../data";
+import { useData } from "../components/context/globalContext";
 
 function DetailsProduct() {
   const [video, setVideo] = useState({});
@@ -27,7 +28,12 @@ function DetailsProduct() {
   const rating = (video.vote_average * 10).toFixed(1);
   const releaseYear = video.release_date;
   const voteCount = video.vote_count;
-
+  const dataFromContext=useData();
+  let idWatchList = [];
+  idWatchList = dataFromContext.data.map((el) => {
+    return el.id;
+  });
+  const isInWatchList = idWatchList.includes(video.id);
   return (
     <div style={{marginBottom:"10px"}} className="container-details-video">
       <div className="div-iframe" style={{textAlign:"center"}}>
@@ -54,6 +60,17 @@ function DetailsProduct() {
       <p className="p-3">
         <strong>Year:</strong> {releaseYear}
       </p>
+      <button  disabled={isInWatchList}
+                style={{
+                  cursor: isInWatchList ? "no-drop" : "pointer",
+                  opacity: isInWatchList ? ".5" : "1",
+                }}
+                 onClick={()=>{
+              dataFromContext.dispatch({
+                type:"AddToWatchList",
+                payload:video
+              })
+            }}><span>AddToWatchList</span></button>
      </div>
     </div>
   );
