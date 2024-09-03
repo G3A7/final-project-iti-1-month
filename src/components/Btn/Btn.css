@@ -25,8 +25,9 @@
 .btn-container button{
     border:none;
     outline:none;
-    width:120px;
-    padding:5px 10px;
+    width:130px;
+    padding:5px 8px;
+    margin-top:2px;
     border-radius:10px;
     /* border:1px solid #001; */
     background-color:transparent;
